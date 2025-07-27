@@ -14,7 +14,7 @@ jobs:
 
       - name: Unzip all zip files
         run: |
-          for file in $(find . -name '*.zip'); do
+          for file in $(find . -main '*.zip'); do
             unzip -o "$file" -d "${file%.*}"
           done
 
